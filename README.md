@@ -12,3 +12,8 @@
  2) errorMessage = error message if something wents wrnog in the api.
  3) errorCode = error code for associated errors.
  
+#Run the app after making a maven build using command as follows.
+ 1) mvn clean install.
+ 2) select AppStarter file and run it as Spring boot application.
+ 3) hit the port 8070 on localhost through any rest client followed by endpoint url "/getNetPay" keeping method type to be "POST" and content type to be "application/json".
+ 
