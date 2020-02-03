@@ -9,7 +9,7 @@
  
 #The above endpoint give response in form of PaymentResponse with info as following.
  1) netPay = Total amount to be paid be user after availed offers.
- 2) errorMessage = error message if something wents wrnog in the api.
+ 2) errorMessage = error message if something wents wrong in the api.
  3) errorCode = error code for associated errors.
  
 #The app has utility classes named AppUtility, OfferUtility, Constants to support utility methods needed in the app. 
