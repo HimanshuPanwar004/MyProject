@@ -1,6 +1,6 @@
 # MyProject contains payment assesment module.
 
-# It has endpoint "/getNetPay" to give information of payment after applying valid offers.
+# It has endpoint "/getNetPay" with a test case to give information of payment after applying valid offers.
 
 #The above endpoint consumes DTO PaymentDTO with fields as following.
  1) payment = It is not null field indicating the amount on which offer has to be applied.
