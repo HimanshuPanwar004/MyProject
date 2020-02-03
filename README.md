@@ -6,6 +6,12 @@
  1) payment = It is not null field indicating the amount on which offer has to be applied.
  2) userStatus = A not null field to check the user regarding appropriate offers to be availed("isEmp"=If the user is retail employer, "isAffl"= if the user is affiliate, "isCstmrYr2"= if the user is associated with retail shop from past 2 years).
  3) isGrocery = A field to check if the bought item are groceries or not.
+ 4) same payload is attached below.
+  {
+   "payment" : "$200",
+   "userStatus": "isEmp",
+   "isGrocery": "F"
+  }
  
 #The above endpoint give response in form of PaymentResponse with info as following.
  1) netPay = Total amount to be paid be user after availed offers.
