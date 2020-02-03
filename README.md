@@ -12,6 +12,8 @@
  2) errorMessage = error message if something wents wrnog in the api.
  3) errorCode = error code for associated errors.
  
+#The app has utility classes named AppUtility, OfferUtility, Constants to support utility methods needed in the app. 
+ 
 #Run the app after making a maven build using command as follows.
  1) mvn clean install.
  2) select AppStarter file and run it as Spring boot application.
