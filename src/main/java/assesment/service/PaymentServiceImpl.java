@@ -48,7 +48,7 @@ public class PaymentServiceImpl implements PaymentService{
 		}
 		catch(Exception ex) {
 
-			response.setErrorMessage(ex.getMessage().toString());
+			response.setErrorMessage(ex.getMessage());
 			response.setErrorCode(HttpStatus.BAD_REQUEST.value());
 			return response;
 		}
