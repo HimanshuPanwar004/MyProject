@@ -63,7 +63,7 @@ public class PaymentServiceImpl implements PaymentService{
 	 * @return
 	 * @throws Exception
 	 */
-	private PaymentResponse processNetPercentOffer(PaymentDto payInfo, BigDecimal tempPay) throws Exception {
+	private PaymentResponse processNetPercentOffer(PaymentDto payInfo, BigDecimal tempPay) {
 		
 		BigDecimal netPayable = null;
 		String userStatus = payInfo.getUserStatus();
@@ -73,7 +73,7 @@ public class PaymentServiceImpl implements PaymentService{
 			if(tempPay.intValue()==100 || tempPay.intValue()>100) {
 				netPayable = offerUtility.getNetOnHundredOnEveryBillBD(tempPay);
 			}
-			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, 30));
+			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, Constants.THIRTY_PERCENT));
 			return response;
 		}
 
@@ -81,14 +81,14 @@ public class PaymentServiceImpl implements PaymentService{
 			if(tempPay.intValue()==100 || tempPay.intValue()>100) {
 				netPayable = offerUtility.getNetOnHundredOnEveryBillBD(tempPay);
 			}
-			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, 10));
+			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, Constants.TEN_PERCENT));
 			return response;
 		}
 		else if(userStatus.equals(Constants.IS_CUSTOMER_2_YRS)) {
 			if(tempPay.intValue()==100 || tempPay.intValue()>100) {
 				netPayable = offerUtility.getNetOnHundredOnEveryBillBD(tempPay);
 			}
-			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, 5));
+			response.setNetPayable(offerUtility.getBillOnPercentageOffer(netPayable, Constants.FIVE_PERCENT));
 			return response;
 		}
 		else {
